@@ -1,0 +1,78 @@
+@import "vars";
+
+.technologies-section {
+  .section-header-container {
+    margin-bottom: 60px;
+
+    h2 {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .header-line {
+      display: block;
+      width: 10%;
+      height: 8px;
+      margin: 0 auto;
+      background: $pw-secondary-dark;
+    }
+  }
+
+  .technology-list {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: wrap;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+
+    .technology-item {
+      margin: 0;
+      padding: 30px 16px;
+      width: 150px;
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+
+      .icon-container {
+        pointer-events: none;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        box-shadow: 0 3px 21px 0 rgba(0, 0, 0, 0.31);
+        border-radius: 18px;
+        margin-bottom: 30px;
+
+        img {
+          max-width: 64px;
+          height: auto;
+        }
+      }
+
+
+      .technology-name {
+        color: white;
+        text-align: center;
+        width: 100%;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .technology-section {
+    padding: 90px 70px;
+
+  }
+
+  .front-end-technologies {
+    background: $pw-bg-color;
+  }
+
+  .back-end-technologies {
+    background: $pw-primary-light;
+  }
+}

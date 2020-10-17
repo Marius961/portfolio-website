@@ -1,0 +1,47 @@
+@import "vars";
+
+.about-me-section {
+  background: $pw-bg-color;
+  padding: 90px 180px;
+
+  .info-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    .photo-container {
+      .photo-img {
+        width: 340px;
+        height: 340px;
+
+        border-radius: 100%;
+        background: $pw-primary;
+      }
+    }
+
+    .about-me-text-container {
+      margin-left: 200px;
+
+      .header-container {
+        h2 {
+          font-size: 24px;
+          text-align: center;
+        }
+
+        .header-line {
+          display: block;
+          width: 10%;
+          height: 8px;
+          margin: 0 auto;
+          background: $pw-secondary-dark;
+        }
+      }
+
+      .text {
+        font-size: 18px;
+      }
+    }
+  }
+}

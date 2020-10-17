@@ -1,0 +1,73 @@
+@import "vars";
+
+.my-principles-section {
+
+  background: $pw-primary;
+  padding: 90px 0;
+
+  .principles {
+    max-width: 1920px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    .item {
+      margin: 0 25px;
+      padding: 50px;
+      width: 200px;
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+      transition: .5s;
+      transition-delay: .25s;
+
+      &:hover {
+        transition: .5s;
+        border: 1px solid $pw-primary;
+        -webkit-box-shadow: 0 0 31px 0 rgba(0,0,0,0.75);
+        -moz-box-shadow: 0 0 31px 0 rgba(0,0,0,0.75);
+        box-shadow: 0 0 31px 0 rgba(0,0,0,0.75);
+      }
+
+      .icon-container {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        background: $pw-primary-light;
+      }
+
+      .title-container {
+        margin-top: 30px;
+        width: 100%;
+
+        .title {
+          display: block;
+          text-align: center;
+          color: white;
+          font-size: 20px;
+        }
+
+        .line {
+          display: block;
+          margin: 20px auto;
+          height: 3px;
+          width: 20%;
+          background: white;
+        }
+      }
+
+      .description-container {
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+        color: white;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

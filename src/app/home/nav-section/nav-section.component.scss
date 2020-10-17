@@ -1,0 +1,35 @@
+@import "vars";
+
+.nav-section {
+  background: $pw-primary;
+  position: sticky;
+  top: 0;
+
+  nav {
+    margin: 0 auto;
+    max-width: 1920px;
+    border-bottom: 3px solid $pw-secondary;
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+      color: white;
+      margin: 0;
+
+      li {
+        cursor: pointer;
+        font-size: 18px;
+        padding: 16px 16px;
+        transition: all .5s;
+
+        &:hover {
+          color: $pw-secondary;
+          transition: all .5s;
+          -webkit-box-shadow: 0 0 31px 0 rgba(0,0,0,0.75);
+          -moz-box-shadow: 0 0 31px 0 rgba(0,0,0,0.75);
+          box-shadow: 0 0 31px 0 rgba(0,0,0,0.75);
+        }
+      }
+    }
+  }
+}
