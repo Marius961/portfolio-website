@@ -1,0 +1,40 @@
+@import "vars";
+@import "mixins";
+
+.technology-item {
+  margin: 0;
+  padding: 30px 10px;
+  width: 150px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+
+  .icon-container {
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 0 3px 21px 0 rgba(0, 0, 0, 0.31);
+    border-radius: 18px;
+    margin-bottom: 30px;
+
+    img {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  .technology-name {
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    font-size: 20px;
+  }
+
+  @include breakpoint($sm) {
+    padding: 30px 16px;
+  }
+}
