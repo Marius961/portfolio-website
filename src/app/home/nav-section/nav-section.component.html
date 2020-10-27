@@ -1,6 +1,10 @@
 <section class="nav-section">
   <nav>
-    <ul class="nav-list">
+    <div class="menu-icon-container" (click)="toggleMenu()">
+      <span class="menu-icon"></span>
+    </div>
+
+    <ul class="nav-list opened" [ngClass]="{'opened': isMenuOpened}">
       <li>Home</li>
       <li>About me</li>
       <li>My principles</li>
