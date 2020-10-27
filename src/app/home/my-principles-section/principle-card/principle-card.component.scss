@@ -8,7 +8,7 @@
 .principle-card {
   margin: 20px;
   padding: 20px;
-  width: 200px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   border: 1px solid transparent;
@@ -24,31 +24,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 150px;
-    border-radius: 26px;
+    width: 100px;
+    height: 100px;
+    border-radius: 18px;
     background: $pw-primary-light;
 
     img {
-      width: 100px;
-      height: 100px;
+      width: 64px;
+      height: 64px;
     }
   }
 
   .title {
     margin: 20px auto;
-
     width: 100%;
     display: block;
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .description-container {
     text-align: center;
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     color: white;
 
     p {
@@ -57,8 +56,28 @@
   }
 
   @include breakpoint($sm) {
+    width: 200px;
     margin: 20px;
     padding: 20px;
+
+    .icon-container {
+      width: 150px;
+      height: 150px;
+      border-radius: 26px;
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .title {
+      font-size: 20px;
+    }
+
+    .description-container {
+      font-size: 16px;
+    }
   }
 
   @include breakpoint($md) {

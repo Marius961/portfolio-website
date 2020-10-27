@@ -11,7 +11,7 @@
   background-size: cover;
 
   .header {
-    font-size: 22px;
+    font-size: 36px;
     margin: 0;
     color: #d6d6d6;
     text-align: center;
@@ -19,14 +19,6 @@
 
     .name {
       color: white;
-    }
-  }
-}
-
-@include breakpoint($sm) {
-  .header-section {
-    .header {
-      font-size: 36px;
     }
   }
 }
