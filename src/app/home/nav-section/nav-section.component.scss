@@ -3,10 +3,15 @@
 
 .nav-section {
   background: $pw-primary;
-  position: sticky;
+  width: 100%;
+  position: fixed;
   top: 0;
 
   nav {
+    $menu-icon-w-h: 30px;
+    $menu-icon-margin: 18px;
+
+    position: relative;
     margin: 0 auto;
     max-width: $xxl;
     border-bottom: 3px solid $pw-secondary;
@@ -20,6 +25,9 @@
       flex-wrap: wrap;
       list-style: none;
       color: white;
+      position: absolute;
+      background: $pw-primary;
+      top: $menu-icon-w-h + ($menu-icon-margin * 2);
 
       width: 100%;
       margin: 0;
@@ -32,9 +40,11 @@
         padding: 16px 16px;
         transition: all .5s;
 
-        &:hover {
+         &:hover, &.active-section {
           color: $pw-secondary;
-          transition: all .5s;
+        }
+
+        &:hover {
           box-shadow: 0 0 31px 0 rgba(0,0,0,0.75);
         }
       }
@@ -51,9 +61,9 @@
 
       .menu-icon {
         display: block;
-        width: 30px;
-        height: 30px;
-        margin: 18px;
+        width: $menu-icon-w-h;
+        height: $menu-icon-w-h;
+        margin: $menu-icon-margin;
         background: url("/../../../assets/img/menu_icon.svg") no-repeat center;
         background-size: 100%;
       }
@@ -72,6 +82,8 @@
       .nav-list {
         display: flex;
         height: auto;
+        position: relative;
+        top: 0;
 
         li {
           width: auto;
