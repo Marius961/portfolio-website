@@ -1,5 +1,5 @@
-<pw-nav-section></pw-nav-section>
+<pw-nav-section (sectionSelected)="scrollToSection($event)"></pw-nav-section>
 <pw-header-section></pw-header-section>
-<pw-about-me-section></pw-about-me-section>
-<pw-my-principles-section></pw-my-principles-section>
-<pw-technologies-section></pw-technologies-section>
+<pw-about-me-section #aboutSection></pw-about-me-section>
+<pw-my-principles-section #principlesSection></pw-my-principles-section>
+<pw-technologies-section #technologiesSection></pw-technologies-section>

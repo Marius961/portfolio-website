@@ -5,10 +5,9 @@
     </div>
 
     <ul class="nav-list opened" [ngClass]="{'opened': isMenuOpened}">
-      <li>Home</li>
-      <li>About me</li>
-      <li>My principles</li>
-      <li>Technology stack</li>
+      <li (click)="selectSection('ABOUT_SECTION')">About me</li>
+      <li (click)="selectSection('PRIORITIES_SECTION')">My principles</li>
+      <li (click)="selectSection('TECHNOLOGIES_SECTION')">Technology stack</li>
 <!--      <li>My projects</li>-->
 <!--      <li>Contact form</li>-->
     </ul>
