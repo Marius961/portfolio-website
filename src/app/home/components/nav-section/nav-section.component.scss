@@ -1,7 +1,8 @@
-@import "vars";
-@import "mixins";
+@import "src/scss/vars";
+@import "src/scss/mixins";
 
 .nav-section {
+  z-index: 9999;
   background: $pw-primary;
   width: 100%;
   position: fixed;
@@ -64,7 +65,7 @@
         width: $menu-icon-w-h;
         height: $menu-icon-w-h;
         margin: $menu-icon-margin;
-        background: url("/../../../assets/img/menu_icon.svg") no-repeat center;
+        background: url("/../../../../assets/img/menu_icon.svg") no-repeat center;
         background-size: 100%;
       }
     }

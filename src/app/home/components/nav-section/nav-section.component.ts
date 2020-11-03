@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {HomeSection} from '../enums/homeSection';
+import {HomeSection} from '../../enums/homeSection';
 
 @Component({
   selector: 'pw-nav-section',

@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   @ViewChild("aboutSection", { read: ElementRef }) aboutSection: ElementRef;
   @ViewChild("principlesSection", { read: ElementRef }) principlesSection: ElementRef;
   @ViewChild("technologiesSection", { read: ElementRef }) technologiesSection: ElementRef;
+  @ViewChild("projectsSection", { read: ElementRef }) projectsSection: ElementRef;
 
   constructor() { }
 
@@ -29,6 +30,8 @@ export class HomeComponent implements OnInit {
       case HomeSection.TECHNOLOGIES_SECTION:
         this.scrollTo(this.technologiesSection.nativeElement)
         break;
+      case HomeSection.PROJECTS_SECTION:
+        this.scrollTo(this.projectsSection.nativeElement)
     }
   }
 

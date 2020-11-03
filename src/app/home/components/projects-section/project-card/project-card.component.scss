@@ -1,0 +1,144 @@
+@import "mixins";
+@import "vars";
+
+.project-card {
+  $card-bg-original-w: 1920px;
+  $card-bg-original-h: 1080px;
+
+  width: $card-bg-original-w * .16;
+  height: $card-bg-original-h * .16;
+  margin: 6px;
+
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+
+  background: grey center no-repeat;
+  background-size: 100%;
+
+  .project-info-container {
+    border-radius: 0 0 6px 6px;
+    padding: 0 0 0 16px;
+    width: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.36);
+    backdrop-filter: blur(6px);
+
+    .content {
+      padding: 16px 16px 16px 0;
+
+      h4 {
+        margin: 0;
+      }
+    }
+
+    .more-info-button {
+      padding-left: 16px;
+      margin-left: 16px;
+
+      min-width: 40px;
+      min-height: 40px;
+
+      width: 40px;
+      height: 40px;
+
+      border-left: 1px solid white;
+      background-repeat: no-repeat;
+      background-image: url("/../../../../../assets/img/info-icon.svg");
+      background-size: 26px;
+      background-position: center;
+      transition: opacity .25s;
+
+      &:hover {
+        cursor: pointer;
+        opacity: .8;
+      }
+    }
+  }
+
+  .project-description {
+    border-radius: 6px;
+    z-index: 2;
+    color: white;
+    padding: 16px;
+    position: absolute;
+    height: inherit;
+    left: 0;
+    right: 0;
+    top: 100%;
+    transition: top .3s ease-out;
+    overflow-y: auto;
+    backdrop-filter: blur(6px);
+
+    &.show {
+      top: 0;
+    }
+
+    .about-header-section {
+      position: static;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h5 {
+        margin: 0;
+        font-size: 16px;
+      }
+
+      .close-btn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 6px 10px;
+        transition: box-shadow .3s;
+        font-size: 16px;
+
+        img {
+          margin-left: 16px;
+          width: 16px;
+          height: 16px;
+        }
+
+        &:hover {
+          box-shadow: 0 0 16px 0 rgba(0,0,0,0.75);
+        }
+      }
+    }
+
+    .info-text {
+      text-align: justify;
+      //TODO: Fix text container margin
+      margin-bottom: 26px;
+    }
+  }
+
+  @include breakpoint($sm) {
+    width: $card-bg-original-w * .29;
+    height: $card-bg-original-h * .29;
+    margin: 9px;
+  }
+
+  @include breakpoint($md) {
+    width: $card-bg-original-w * .38;
+    height: $card-bg-original-h * .38;
+    margin: 19px;
+  }
+
+  @include breakpoint($lg) {
+    width: $card-bg-original-w * .25;
+    height: $card-bg-original-h * .25;
+    margin: 5px;
+  }
+
+  @include breakpoint($xl) {
+    width: $card-bg-original-w * .3;
+    height: $card-bg-original-h * .3;
+    margin: 10px;
+  }
+}
