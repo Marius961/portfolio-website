@@ -1,14 +1,12 @@
 @import "mixins";
 @import "vars";
 
+$card-bg-original-w: 1920px;
+$card-bg-original-h: 1080px;
+
 .project-card {
-  $card-bg-original-w: 1920px;
-  $card-bg-original-h: 1080px;
 
-  width: $card-bg-original-w * .16;
-  height: $card-bg-original-h * .16;
   margin: 6px;
-
   display: flex;
   align-items: flex-end;
   position: relative;
@@ -18,19 +16,33 @@
   background: grey center no-repeat;
   background-size: 100%;
 
-  .project-info-container {
-    border-radius: 0 0 6px 6px;
-    padding: 0 0 0 16px;
-    width: 100%;
-    display: flex;
-    color: white;
-    align-items: center;
-    justify-content: space-between;
+  .card-img {
+    width: $card-bg-original-w * .3;
+    height: $card-bg-original-h * .3;
+  }
 
-    box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.36);
+  .card-title-container {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 0 16px;
+    border-radius: 0 0 6px 6px;
+
+    color: white;
+    box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.36);
     backdrop-filter: blur(6px);
 
-    .content {
+    transition: bottom .3s ease-out;
+
+    &.show-description {
+      bottom: 100%;
+    }
+
+    .card-title {
       padding: 16px 16px 16px 0;
 
       h4 {
@@ -62,26 +74,25 @@
     }
   }
 
-  .project-description {
-    border-radius: 6px;
+  .card-description {
     z-index: 2;
-    color: white;
-    padding: 16px;
+    box-sizing: border-box;
+    height: 100%;
     position: absolute;
-    height: inherit;
-    left: 0;
-    right: 0;
+    padding: 16px;
+    border-radius: 6px;
     top: 100%;
-    transition: top .3s ease-out;
     overflow-y: auto;
+
+    color: white;
+    transition: top .3s ease-out;
     backdrop-filter: blur(6px);
 
-    &.show {
+    &.show-description {
       top: 0;
     }
 
-    .about-header-section {
-      position: static;
+    .description-header-section {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -106,39 +117,48 @@
         }
 
         &:hover {
-          box-shadow: 0 0 16px 0 rgba(0,0,0,0.75);
+          box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.75);
         }
       }
     }
 
     .info-text {
       text-align: justify;
-      //TODO: Fix text container margin
-      margin-bottom: 26px;
     }
   }
+}
 
-  @include breakpoint($sm) {
-    width: $card-bg-original-w * .29;
-    height: $card-bg-original-h * .29;
-    margin: 9px;
-  }
-
-  @include breakpoint($md) {
-    width: $card-bg-original-w * .38;
-    height: $card-bg-original-h * .38;
-    margin: 19px;
-  }
-
-  @include breakpoint($lg) {
-    width: $card-bg-original-w * .25;
-    height: $card-bg-original-h * .25;
+@include breakpoint-to($xl) {
+  .project-card {
     margin: 5px;
-  }
 
-  @include breakpoint($xl) {
-    width: $card-bg-original-w * .3;
-    height: $card-bg-original-h * .3;
-    margin: 10px;
+    .card-img {
+      width: $card-bg-original-w * .25;
+      height: $card-bg-original-h * .25;
+    }
+  }
+}
+
+@include breakpoint-to($lg) {
+  .project-card {
+    //margin: 9px;
+    margin: 7px;
+
+
+    .card-img {
+      width: $card-bg-original-w * .29;
+      height: $card-bg-original-h * .29;
+    }
+  }
+}
+
+@include breakpoint-to($sm) {
+  .project-card {
+    margin: 7px;
+
+    .card-img {
+      width: 100%;
+      height: auto;
+    }
   }
 }

@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin breakpoint-to($width) {
+  @media all and (max-width: $width) {
+    @content;
+  }
+}
