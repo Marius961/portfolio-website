@@ -9,8 +9,8 @@
   top: 0;
 
   nav {
-    $menu-icon-w-h: 30px;
-    $menu-icon-margin: 18px;
+    $menu-icon-w-h: 20px;
+    $menu-icon-margin: 15px;
 
     position: relative;
     margin: 0 auto;
@@ -37,16 +37,13 @@
       li {
         width: 100%;
         cursor: pointer;
-        font-size: 18px;
+        font-size: 14px;
         padding: 16px 16px;
         transition: all .5s;
 
-         &:hover, &.active-section {
-          color: $pw-secondary;
-        }
-
         &:hover {
-          box-shadow: 0 0 31px 0 rgba(0,0,0,0.75);
+          color: $pw-secondary;
+          background: $pw-bg-dark-color;
         }
       }
 
@@ -71,10 +68,6 @@
     }
   }
 
-  @include breakpoint($md) {
-
-  }
-
   @include breakpoint($lg) {
 
     nav {
@@ -87,7 +80,14 @@
         top: 0;
 
         li {
+          font-size: 18px;
           width: auto;
+
+          &:hover {
+            color: $pw-secondary;
+            background: none;
+            box-shadow: 0 0 31px 0 rgba(0, 0, 0, 0.75);
+          }
         }
       }
 
