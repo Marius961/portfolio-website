@@ -2,35 +2,17 @@
 @import "src/scss/mixins";
 
 .technologies-section {
-  .section-header-container {
-    margin-bottom: 60px;
-
-    h2 {
-      font-size: 24px;
-      text-align: center;
-    }
-
-    .header-line {
-      display: block;
-      width: 10%;
-      height: 8px;
-      margin: 0 auto;
-      background: $pw-secondary-dark;
-    }
+  .technology-section {
+    padding: 90px 10px;
   }
 
   .technology-list {
-    max-width: 1920px;
     margin: 0 auto;
     display: flex;
     flex-flow: wrap;
     list-style: none;
     padding: 0;
     justify-content: center;
-  }
-
-  .technology-section {
-    padding: 90px 10px;
   }
 
   .front-end-technologies {

@@ -10,11 +10,12 @@ import { PrincipleCardComponent } from './components/my-principles-section/princ
 import { TechnologyItemComponent } from './components/technologies-section/technology-item/technology-item.component';
 import { ProjectsSectionComponent } from './components/projects-section/projects-section.component';
 import { ProjectCardComponent } from './components/projects-section/project-card/project-card.component';
+import { SectionTitleComponent } from './components/section-title/section-title.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, HeaderSectionComponent, NavSectionComponent, AboutMeSectionComponent, MyPrinciplesSectionComponent, TechnologiesSectionComponent, PrincipleCardComponent, TechnologyItemComponent, ProjectsSectionComponent, ProjectCardComponent],
+  declarations: [HomeComponent, HeaderSectionComponent, NavSectionComponent, AboutMeSectionComponent, MyPrinciplesSectionComponent, TechnologiesSectionComponent, PrincipleCardComponent, TechnologyItemComponent, ProjectsSectionComponent, ProjectCardComponent, SectionTitleComponent],
   imports: [
     CommonModule
   ],

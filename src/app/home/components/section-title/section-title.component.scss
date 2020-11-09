@@ -1,0 +1,18 @@
+@import "vars";
+
+.section-header-container {
+  margin-bottom: 60px;
+
+  h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .header-line {
+    display: block;
+    width: 10%;
+    height: 8px;
+    margin: 0 auto;
+    background: $pw-secondary-dark;
+  }
+}

@@ -2,12 +2,10 @@
 @import "mixins";
 
 .about-me-section {
-  background: #ffffff url("/../../../assets/img/gplay.png") repeat;
+  background: #ffffff url("/../../../../assets/img/gplay.png") repeat;
   padding: 90px 10px;
 
   .info-container {
-    max-width: $xxl;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -30,23 +28,6 @@
     .about-me-text-container {
       width: 100%;
 
-      .header-container {
-        margin-top: 30px;
-
-        h2 {
-          font-size: 18px;
-          text-align: center;
-        }
-
-        .header-line {
-          display: block;
-          width: 10%;
-          height: 5px;
-          margin: 0 auto;
-          background: $pw-secondary-dark;
-        }
-      }
-
       .text {
         font-size: 16px;
         text-align: center;
@@ -65,18 +46,6 @@
       }
 
       .about-me-text-container {
-        .header-container {
-          margin-top: 0;
-
-          h2 {
-            font-size: 24px;
-          }
-
-          .header-line {
-            height: 8px;
-          }
-        }
-
         .text {
           font-size: 18px;
         }
