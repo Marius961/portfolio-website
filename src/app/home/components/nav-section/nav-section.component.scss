@@ -6,6 +6,7 @@
   background: $pw-primary;
   width: 100%;
   position: fixed;
+  border-bottom: 3px solid $pw-secondary;
   top: 0;
 
   nav {
@@ -15,7 +16,6 @@
     position: relative;
     margin: 0 auto;
     max-width: $xxl;
-    border-bottom: 3px solid $pw-secondary;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,6 +49,7 @@
 
       &.opened {
         display: flex;
+        border-bottom: 3px solid $pw-secondary;
       }
     }
 

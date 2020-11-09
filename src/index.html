@@ -10,6 +10,107 @@
   <link rel="preload" href="assets/img/bg_1.png" as="image" />
 </head>
 <body>
-  <pw-root></pw-root>
+  <pw-root>
+    <style>
+      body {
+        background: #1F1F29;
+      }
+      svg {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+        transform: translate(-50%, -50%) rotate(45deg) scale(1);
+        box-shadow: 0px 0px 33px -11px rgba(0,0,0,0.75);
+      }
+
+      .stroke-still {
+        stroke: #272633;
+      }
+
+      .stroke-animation {
+        -webkit-animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+        animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-delay: 0ms;
+        animation-delay: 0ms;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-play-state: running;
+        animation-play-state: running;
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+      }
+
+      @-webkit-keyframes stroke-spacing {
+        0% {
+          stroke-dasharray: 0 200;
+        }
+        45% {
+          stroke-dashoffset: 0;
+          stroke-dasharray: 200 200;
+        }
+        90% {
+          stroke-dashoffset: -200;
+          stroke-dasharray: 200 200;
+        }
+        100% {
+          stroke-dashoffset: -200;
+          stroke-dasharray: 200 200;
+        }
+      }
+
+      @keyframes stroke-spacing {
+        0% {
+          stroke-dasharray: 0 200;
+        }
+        45% {
+          stroke-dashoffset: 0;
+          stroke-dasharray: 200 200;
+        }
+        90% {
+          stroke-dashoffset: -200;
+          stroke-dasharray: 200 200;
+        }
+        100% {
+          stroke-dashoffset: -200;
+          stroke-dasharray: 200 200;
+        }
+      }
+
+      @-webkit-keyframes stroke-color {
+        0%  { stroke: #6C688C; }
+        24% { stroke: #716e94; }
+        25% { stroke: #3B394D; }
+        49% { stroke: #9a96c8; }
+        50% { stroke: #4c3fb8; }
+        74% { stroke: #5f5f5f; }
+        75% { stroke: #3a3269; }
+        99% { stroke: #716e94; }
+      }
+
+      @keyframes stroke-color {
+        0%  { stroke: #6C688C; }
+        24% { stroke: #716e94; }
+        25% { stroke: #3B394D; }
+        49% { stroke: #9a96c8; }
+        50% { stroke: #4c3fb8; }
+        74% { stroke: #5f5f5f; }
+        75% { stroke: #3a3269; }
+        99% { stroke: #716e94; }
+      }
+
+    </style>
+
+    <svg width="200" height="200" viewBox="0 0 100 100">
+      <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+    </svg>
+  </pw-root>
 </body>
 </html>
