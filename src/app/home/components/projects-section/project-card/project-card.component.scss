@@ -5,6 +5,7 @@ $card-bg-original-w: 1920px;
 $card-bg-original-h: 1080px;
 
 .project-card {
+  width: $card-bg-original-w * .3;
 
   margin: 6px;
   display: flex;
@@ -15,6 +16,19 @@ $card-bg-original-h: 1080px;
 
   background: grey center no-repeat;
   background-size: 100%;
+
+  .image-wrapper {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.2%;
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   .card-img {
     width: $card-bg-original-w * .3;
@@ -132,33 +146,74 @@ $card-bg-original-h: 1080px;
   .project-card {
     margin: 5px;
 
-    .card-img {
-      width: $card-bg-original-w * .25;
-      height: $card-bg-original-h * .25;
-    }
+    width: $card-bg-original-w * .25;
   }
 }
 
 @include breakpoint-to($lg) {
   .project-card {
-    //margin: 9px;
-    margin: 7px;
+    margin: 9px;
 
-
-    .card-img {
-      width: $card-bg-original-w * .29;
-      height: $card-bg-original-h * .29;
-    }
+    width: $card-bg-original-w * .29;
   }
 }
 
 @include breakpoint-to($sm) {
-  .project-card {
-    margin: 7px;
 
-    .card-img {
-      width: 100%;
-      height: auto;
+  :host {
+    margin: 9px;
+    width: 100%;
+  }
+
+  .project-card {
+    margin: 0;
+
+    width: 100%;
+    height: auto;
+
+    .card-title-container {
+      .card-title {
+        padding: 10px 10px 10px 0;
+
+        h4 {
+          font-size: 14px;
+        }
+      }
+
+      .more-info-button {
+        padding-left: 16px;
+        margin-left: 16px;
+
+        min-width: 24px;
+        min-height: 24px;
+        width: 24px;
+        height: 24px;
+
+        background-size: 18px;
+      }
+    }
+
+    .card-description {
+      .description-header-section {
+        h5 {
+          font-size: 14px;
+        }
+
+        .close-btn {
+          padding: 6px 8px;
+          font-size: 12px;
+
+          img {
+            margin-left: 10px;
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+
+      .info-text {
+        font-size: 13px;
+      }
     }
   }
 }
