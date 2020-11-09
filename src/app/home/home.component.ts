@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit {
   }
 
   public scrollToSection(homeSection: HomeSection) {
-    debugger
     switch (homeSection) {
       case HomeSection.ABOUT_SECTION:
         this.scrollTo(this.aboutSection.nativeElement);

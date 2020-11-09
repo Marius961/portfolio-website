@@ -18,6 +18,7 @@ export class NavSectionComponent implements OnInit {
   }
 
   public selectSection(sectionName: string): void {
+    this.isMenuOpened = false;
     this.sectionSelected.emit(HomeSection[sectionName]);
   }
 
