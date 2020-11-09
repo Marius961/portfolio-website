@@ -1,4 +1,7 @@
-<div class="section-header-container">
+<div
+  class="section-header-container"
+  [ngClass]="{'header-dark': headerStyle === 'dark', 'header-light': headerStyle === 'light'}"
+>
   <h2>
     <ng-content></ng-content>
   </h2>

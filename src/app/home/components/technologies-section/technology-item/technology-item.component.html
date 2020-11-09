@@ -1,4 +1,8 @@
-<li class="technology-item">
+<li
+  class="technology-item"
+  [ngClass]="{'item-dark': itemStyle === 'dark', 'item-light': itemStyle === 'light'}"
+>
+
   <div class="icon-container">
     <img [src]="imageSrc" alt="">
   </div>

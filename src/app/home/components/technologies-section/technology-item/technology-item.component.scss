@@ -16,7 +16,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
     box-shadow: 0 3px 21px 0 rgba(0, 0, 0, 0.31);
     border-radius: 18px;
     margin-bottom: 30px;
@@ -32,6 +31,26 @@
     font-weight: bold;
     width: 100%;
     font-size: 16px;
+  }
+
+  &.item-dark {
+    .technology-name {
+      color: white;
+    }
+
+    .icon-container {
+      background: white;
+    }
+  }
+
+  &.item-light {
+    .technology-name {
+      color: #3B394D;
+    }
+
+    .icon-container {
+      background: white;
+    }
   }
 
   @include breakpoint($sm) {

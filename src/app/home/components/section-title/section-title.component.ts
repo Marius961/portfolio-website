@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'pw-section-title',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./section-title.component.scss']
 })
 export class SectionTitleComponent implements OnInit {
+
+  @Input() public headerStyle: "dark" | "light" = "dark";
 
   constructor() { }
 

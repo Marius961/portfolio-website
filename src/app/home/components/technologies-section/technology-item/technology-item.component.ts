@@ -9,6 +9,7 @@ export class TechnologyItemComponent implements OnInit {
 
   @Input() public imageSrc: string;
   @Input() public technologyName: string;
+  @Input() public itemStyle: "dark" | "light" = "light";
 
   constructor() { }
 

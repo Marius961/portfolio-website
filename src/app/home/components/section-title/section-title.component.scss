@@ -1,9 +1,10 @@
 @import "vars";
 
 .section-header-container {
-  margin-bottom: 60px;
+  margin-bottom: 26px;
 
   h2 {
+    margin: 0 0 12px;
     font-size: 24px;
     text-align: center;
   }
@@ -11,8 +12,29 @@
   .header-line {
     display: block;
     width: 10%;
-    height: 8px;
+    height: 5px;
     margin: 0 auto;
+    border-radius: 3px;
     background: $pw-secondary-dark;
+  }
+
+  &.header-light {
+    h2 {
+      color: white;
+    }
+
+    .header-line {
+      background: white;
+    }
+  }
+
+  &.header-dark {
+    h2 {
+      color: $pw-bg-dark-color;
+    }
+
+    .header-line {
+      color: $pw-bg-dark-color;
+    }
   }
 }
