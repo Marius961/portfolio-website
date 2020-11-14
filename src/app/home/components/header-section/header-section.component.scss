@@ -22,3 +22,9 @@
     }
   }
 }
+
+@include breakpoint-to($xl) {
+  .header-section {
+    background-attachment: scroll;
+  }
+}
