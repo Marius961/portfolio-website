@@ -11,11 +11,12 @@ import { TechnologyItemComponent } from './components/technologies-section/techn
 import { ProjectsSectionComponent } from './components/projects-section/projects-section.component';
 import { ProjectCardComponent } from './components/projects-section/project-card/project-card.component';
 import { SectionTitleComponent } from './components/section-title/section-title.component';
+import { SectionContactComponent } from './components/section-contact/section-contact.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, HeaderSectionComponent, NavSectionComponent, AboutMeSectionComponent, MyPrinciplesSectionComponent, TechnologiesSectionComponent, PrincipleCardComponent, TechnologyItemComponent, ProjectsSectionComponent, ProjectCardComponent, SectionTitleComponent],
+  declarations: [HomeComponent, HeaderSectionComponent, NavSectionComponent, AboutMeSectionComponent, MyPrinciplesSectionComponent, TechnologiesSectionComponent, PrincipleCardComponent, TechnologyItemComponent, ProjectsSectionComponent, ProjectCardComponent, SectionTitleComponent, SectionContactComponent],
   imports: [
     CommonModule
   ],
