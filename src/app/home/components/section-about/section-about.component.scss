@@ -1,0 +1,145 @@
+@import "vars";
+@import "mixins";
+
+.section-about {
+  padding: 90px 10px;
+  background: #ffffff url("/../../../../assets/img/gplay.png") repeat;
+
+  .info-container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+
+    .title-bold {
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      color: $pw-primary-light;
+    }
+
+    .about-col {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      margin-top: 40px;
+    }
+
+    .personal-info-container {
+      margin-right: 30px;
+
+      .photo-container {
+        margin: 0 auto 35px;
+
+        img {
+          width: 300px;
+          height: 300px;
+
+          border-radius: 100%;
+        }
+      }
+
+      .about-me-text {
+        text-align: center;
+      }
+
+      .btn-container {
+        margin-top: 20px;
+
+        .contact-me-btn {
+          display: block;
+          padding: 14px 40px;
+          margin: 0 auto;
+          border: 0;
+          border-radius: 4px;
+
+          font-size: 16px;
+          color: white;
+          background-color: $pw-primary-light;
+          transition: background-color .3s;
+
+          &:focus {
+            outline: none;
+          }
+
+          &:hover {
+            cursor: pointer;
+            background-color: $pw-bg-dark-color;
+          }
+        }
+      }
+    }
+
+    .technologies-container {
+      margin-left: 30px;
+
+      .technologies-title {
+        margin-bottom: 30px;
+      }
+
+      .technologies-list-container {
+        margin-bottom: 20px;
+
+        .list-title {
+          display: block;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+
+          border-bottom: 3px solid $pw-primary-light;
+
+          font-size: 18px;
+          font-weight: bold;
+          color: $pw-primary-light;
+        }
+
+        .technology-list {
+          list-style: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-to($xxl) {
+  .section-about {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@include breakpoint-to($md) {
+  .section-about {
+    .info-container {
+      flex-direction: column;
+
+      .personal-info-container {
+        margin-right: 0;
+        margin-bottom: 60px;
+      }
+
+      .technologies-container {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@include breakpoint-to($sm) {
+  .section-about {
+    .info-container {
+
+      .personal-info-container {
+        .photo-container {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      .technologies-container {
+      }
+    }
+  }
+}

@@ -1,22 +1,24 @@
 @import "vars";
 @import "mixins";
 
-.header-section {
-  height: 100vh;
-  min-height: 600px;
-
+.section-main {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  height: 100vh;
+  min-height: 600px;
+
   background: #3B394D url("/../../../../assets/img/bg_1.png") fixed center no-repeat;
   background-size: cover;
 
-  .header {
-    font-size: 36px;
+  .title {
     margin: 0;
-    color: #d6d6d6;
-    text-align: center;
+
+    font-size: 36px;
     font-weight: normal;
+    text-align: center;
+    color: #d6d6d6;
 
     .name {
       color: white;
@@ -25,7 +27,7 @@
 }
 
 @include breakpoint-to($xl) {
-  .header-section {
+  .section-main {
     background-attachment: scroll;
   }
 }

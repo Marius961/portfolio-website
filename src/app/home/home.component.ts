@@ -26,9 +26,6 @@ export class HomeComponent implements OnInit {
       case HomeSection.PRIORITIES_SECTION:
         this.scrollTo(this.principlesSection.nativeElement);
         break;
-      case HomeSection.TECHNOLOGIES_SECTION:
-        this.scrollTo(this.technologiesSection.nativeElement)
-        break;
       case HomeSection.PROJECTS_SECTION:
         this.scrollTo(this.projectsSection.nativeElement)
     }

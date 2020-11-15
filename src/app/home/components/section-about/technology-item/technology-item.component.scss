@@ -1,0 +1,45 @@
+.technology-item {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 8px 0 0 8px;
+  background: #dddddd;
+
+  .tech-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 8px 0 0 8px;
+    background: white;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .tech-name {
+    display: block;
+    margin-left: 10px;
+  }
+
+  .usage-bar {
+    position: absolute;
+    height: 100%;
+    opacity: .3;
+    background: #9a96c8;
+  }
+
+  .usage-percent {
+    position: absolute;
+    right: 10px;
+    opacity: .5;
+  }
+}
