@@ -1,4 +1,4 @@
-@mixin breakpoint($width) {
+@mixin breakpoint-from($width) {
   @media all and (min-width: $width) {
     @content;
   }

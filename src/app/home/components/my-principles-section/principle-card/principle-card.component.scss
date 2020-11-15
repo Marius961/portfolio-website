@@ -55,7 +55,7 @@
     }
   }
 
-  @include breakpoint($sm) {
+  @include breakpoint-from($sm) {
     width: 200px;
     margin: 20px;
     padding: 20px;
@@ -80,17 +80,17 @@
     }
   }
 
-  @include breakpoint($md) {
+  @include breakpoint-from($md) {
     margin: 30px;
     padding: 30px;
   }
 
-  @include breakpoint($lg) {
+  @include breakpoint-from($lg) {
     margin: 0 30px;
     padding: 30px;
   }
 
-  @include breakpoint($xl) {
+  @include breakpoint-from($xl) {
     margin: 0 40px;
     padding: 50px;
   }

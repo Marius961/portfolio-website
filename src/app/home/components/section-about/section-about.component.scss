@@ -101,6 +101,19 @@
   }
 }
 
+@include breakpoint-from($lg) {
+  .section-about {
+    .info-container {
+      align-items: flex-start;
+
+      .personal-info-container {
+        position: sticky;
+        top: 80px;
+      }
+    }
+  }
+}
+
 @include breakpoint-to($xxl) {
   .section-about {
     padding-left: 18px;
@@ -136,9 +149,6 @@
             height: auto;
           }
         }
-      }
-
-      .technologies-container {
       }
     }
   }
