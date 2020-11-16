@@ -1,11 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'pw-project-card',
+  selector: 'pw-project-card[projectName][projectDescription][imageSrc][projectYear]',
   templateUrl: './project-card.component.html',
   styleUrls: ['./project-card.component.scss']
 })
 export class ProjectCardComponent implements OnInit {
+
+  @Input() imageSrc: string;
+  @Input() projectName: string;
+  @Input() projectDescription: string;
+  @Input() projectYear: string;
 
   public isShowProjectInfo: boolean = false;
 

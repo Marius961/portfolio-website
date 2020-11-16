@@ -1,12 +1,12 @@
 <li class="project-card">
 
   <div class="image-wrapper">
-    <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+    <img [src]="imageSrc" alt="Project image">
   </div>
 
   <div class="card-title-container" [ngClass]="{'show-description': isShowProjectInfo}">
     <div class="card-title">
-      <h4>Project name&nbsp;&nbsp;|&nbsp;&nbsp;2017</h4>
+      <h4> {{projectName}}&nbsp;&nbsp;|&nbsp;&nbsp;{{projectYear}} </h4>
     </div>
     <span class="more-info-button" (click)="setProjectInfoVisibility(true)"></span>
   </div>
@@ -15,24 +15,10 @@
     <section class="description-header-section">
       <h5>About project</h5>
       <span class="close-btn" (click)="setProjectInfoVisibility(false)">
-        Close
+        Hide
         <img src="assets/img/arrow.svg" alt="Close">
       </span>
     </section>
-    <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad amet beatae
-      consectetur consequatur corporis delectus deserunt, distinctio doloremque eius eligendi enim eos et ex id in
-      inventore ipsam iste laborum maxime, mollitia nemo neque nostrum nulla numquam porro praesentium provident
-      quidem quis quisquam ratione reiciendis rem sed sequi ullam ut veritatis. Adipisci assumenda beatae blanditiis
-      cupiditate deleniti distinctio dolore earum enim eos eveniet excepturi expedita illum impedit iste minus
-      necessitatibus neque nihil quis, ratione reprehenderit tempora temporibus, vero, voluptates. Architecto corporis
-      dolorem explicabo fuga impedit neque nihil nisi, nostrum odit officiis, pariatur, quae quam repellendus
-      repudiandae sapiente sed unde voluptatum! Assumenda autem consequuntur cumque debitis deleniti distinctio dolore
-      dolores, earum eveniet fuga fugiat hic impedit libero natus quisquam, sint vel velit. A accusantium atque
-      corporis deleniti ducimus error eveniet fugiat ipsam laboriosam necessitatibus quisquam reiciendis repellendus
-      saepe, tenetur unde. Ad cumque dignissimos dolor eius eligendi eos explicabo illum in itaque laborum minus
-      molestias nemo non, obcaecati odio optio quaerat quas qui quo ratione recusandae repellendus, reprehenderit
-      repudiandae sapiente sed sunt totam voluptatum! Blanditiis cum dolor doloribus impedit laudantium, libero maxime
-      nam quas quasi quia quos repellat vero voluptates. Asperiores error esse quae totam. A amet beatae ea eum
-      repellendus.</p>
+    <p class="info-text"> {{projectDescription}} </p>
   </div>
 </li>

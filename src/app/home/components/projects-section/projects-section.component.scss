@@ -2,19 +2,20 @@
 @import "mixins";
 
 .projects-section {
-  @include section-base;
-
-  max-width: $xxl;
-  margin: 0 auto;
-
   background: $pw-primary;
 
-  .project-cards {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+  .projects-section-container {
+    @include section-base;
 
+    max-width: $xxl;
+    margin: 0 auto;
+
+    .project-cards {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
   }
 }

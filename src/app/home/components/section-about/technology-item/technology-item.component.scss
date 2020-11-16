@@ -1,9 +1,16 @@
+:host {
+  &:not(:last-child) {
+    li {
+      margin-bottom: 20px;
+    }
+  }
+}
+
 .technology-item {
   display: flex;
   position: relative;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 20px;
   overflow: hidden;
   border-radius: 8px 0 0 8px;
   background: #dddddd;
