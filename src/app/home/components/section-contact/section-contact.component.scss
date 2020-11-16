@@ -2,14 +2,14 @@
 @import "mixins";
 
 .section-contact {
-  padding: 90px 10px;
+  @include section-base;
+
   background-color: $pw-bg-dark-color;
 
   .contacts-container {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    margin-top: 60px;
 
     .contact-form-section {
       display: flex;
@@ -23,6 +23,10 @@
           padding-top: 0;
         }
 
+        textarea {
+          resize: vertical;
+        }
+
         input, textarea {
           box-sizing: border-box;
           border-radius: 4px;
@@ -32,7 +36,7 @@
           padding: 16px;
           font-size: 18px;
           border: 1px solid transparent;
-          transition: all .3s;
+          transition: box-shadow .3s, border .3s;
 
           &::placeholder {
             color: #929292;
@@ -199,6 +203,7 @@
 @include breakpoint-to($sm) {
   .section-contact {
     padding: 90px 10px;
+
     .contacts-container {
       flex-flow: column;
 

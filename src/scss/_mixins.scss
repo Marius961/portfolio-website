@@ -9,3 +9,7 @@
     @content;
   }
 }
+
+@mixin section-base {
+  padding: 90px 10px;
+}
