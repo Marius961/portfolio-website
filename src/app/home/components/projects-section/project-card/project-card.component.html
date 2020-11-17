@@ -1,12 +1,12 @@
 <li class="project-card">
 
   <div class="image-wrapper">
-    <img [src]="imageSrc" alt="Project image">
+    <img [src]="project.imageSrc" alt="Project image">
   </div>
 
   <div class="card-title-container" [ngClass]="{'show-description': isShowProjectInfo}">
     <div class="card-title">
-      <h4> {{projectName}}&nbsp;&nbsp;|&nbsp;&nbsp;{{projectYear}} </h4>
+      <h4> {{project.name}}&nbsp;&nbsp;|&nbsp;&nbsp;{{project.year}} </h4>
     </div>
     <span class="more-info-button" (click)="setProjectInfoVisibility(true)"></span>
   </div>
@@ -19,6 +19,6 @@
         <img src="assets/img/arrow.svg" alt="Close">
       </span>
     </section>
-    <p class="info-text"> {{projectDescription}} </p>
+    <p class="info-text"> {{project.description}} </p>
   </div>
 </li>

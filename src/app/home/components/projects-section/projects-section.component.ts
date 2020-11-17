@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PortfolioProjectService} from '../../services/portfolio-project.service';
 
 @Component({
   selector: 'pw-projects-section',
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public portfolioProjectService: PortfolioProjectService) { }
 
   ngOnInit(): void {
   }
-
 }

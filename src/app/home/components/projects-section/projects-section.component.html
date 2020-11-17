@@ -3,40 +3,7 @@
     <pw-section-title headerStyle="light">Portfolio</pw-section-title>
 
     <ul class="project-cards">
-      <pw-project-card
-        imageSrc="/assets/img/projects/patternica_website.jpg"
-        projectName="Patternica website"
-        projectYear="2020"
-        projectDescription='Company website. Company website. Several pages about the company and the field of activity, a blog with useful articles about the life of the company and IT, a page with vacancies and a form for contacting the company. On this project I was engaged in layout and implementation of functionality for the following pages: "Hire developer", "Dedicated team", "Portfolio", "Blog", "Career" and also admin. panel for site management.'
-      ></pw-project-card>
-
-      <pw-project-card
-        imageSrc="/assets/img/projects/nda_project.jpg"
-        projectName="Online restaurant"
-        projectYear="2020"
-        projectDescription='Application for communication in the format of a conversation, for example, in a restaurant. Several interactive backgrounds are available, implemented using a neural network, which turns the background behind the interlocutor into a selected location using only the webcam. Several background sounds are also available to give the conversation the atmosphere of the chosen location.'
-      ></pw-project-card>
-
-      <pw-project-card
-        imageSrc="/assets/img/projects/nda_project.jpg"
-        projectName="Travel portal"
-        projectYear="2019-2020"
-        projectDescription='Website for travelers. There is a large amount of functionality for searching for tours by any parameters, for example: hotels, number of places and way of travel to the destination. The site also provides administrative functions for companies that post their tours (including orders, payment and customer support.). On this project, I was engaged in the development and support of existing functions of the admin panel, fixing bugs and implementing new functionality.'
-      ></pw-project-card>
-
-      <pw-project-card
-        imageSrc="/assets/img/projects/product_manager.jpg"
-        projectName="Product manager"
-        projectYear="2018-2019"
-        projectDescription='My own project, which later became a course work. A marketplace for people who sell consumer goods. There is flexible functionality for buyers, sellers, and administration. It is possible to manage products, easily create new categories and subcategories without interfering with the page code, manage all products, orders, track history and statuses, cart, product units for convenient sale of products of different types.'
-      ></pw-project-card>
-
-      <pw-project-card
-        imageSrc="/assets/img/projects/exams_simulator.jpg"
-        projectName="Exams simulator"
-        projectYear="2018"
-        projectDescription="A project for testing knowledge of tests, supports input data in JSON or TXT format (based on the input data, tests are created with a known correct option). There is a function of mixing answer options, tests, or all together. There is also a quick test function - if the number of questions is more than 30, only 30 random ones will be selected. After completing the testing, statistics will be displayed: the number of correct answers, the score and all the incorrect answers."
-      ></pw-project-card>
+      <pw-project-card *ngFor="let project of portfolioProjectService.getPortfolioProjects()" [project]="project"></pw-project-card>
     </ul>
   </div>
 </section>
