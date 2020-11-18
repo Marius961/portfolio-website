@@ -19,7 +19,7 @@ export class PortfolioProjectService {
       name: 'Online restaurant',
       description: 'Application for communication in the format of a conversation, for example, in a restaurant. Several interactive backgrounds are available, implemented using a neural network, which turns the background behind the interlocutor into a selected location using only the webcam. Several background sounds are also available to give the conversation the atmosphere of the chosen location.',
       year: '2020',
-      imageSrc: '/assets/img/projects/nda_project.jpg'
+      imageSrc: '/assets/img/projects/online-restaurant.jpg'
     },
     {
       id: 2,
