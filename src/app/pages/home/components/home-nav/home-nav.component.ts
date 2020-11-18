@@ -2,11 +2,11 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {HomeSection} from '../../enums/homeSection';
 
 @Component({
-  selector: 'pw-nav-section',
-  templateUrl: './nav-section.component.html',
-  styleUrls: ['./nav-section.component.scss']
+  selector: 'pw-home-nav',
+  templateUrl: './home-nav.component.html',
+  styleUrls: ['./home-nav.component.scss']
 })
-export class NavSectionComponent implements OnInit {
+export class HomeNavComponent implements OnInit {
 
   @Output() sectionSelected: EventEmitter<HomeSection> = new EventEmitter<HomeSection>();
 

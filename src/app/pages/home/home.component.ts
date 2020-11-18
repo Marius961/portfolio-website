@@ -8,10 +8,10 @@ import {HomeSection} from './enums/homeSection';
 })
 export class HomeComponent implements OnInit {
 
-  @ViewChild("aboutSection", { read: ElementRef }) aboutSection: ElementRef;
-  @ViewChild("principlesSection", { read: ElementRef }) principlesSection: ElementRef;
-  @ViewChild("technologiesSection", { read: ElementRef }) technologiesSection: ElementRef;
-  @ViewChild("projectsSection", { read: ElementRef }) projectsSection: ElementRef;
+  @ViewChild("sectionMain", { read: ElementRef }) sectionMain: ElementRef;
+  @ViewChild("sectionAbout", { read: ElementRef }) sectionAbout: ElementRef;
+  @ViewChild("sectionPortfolio", { read: ElementRef }) sectionPortfolio: ElementRef;
+  @ViewChild("sectionContact", { read: ElementRef }) sectionContact: ElementRef;
 
   constructor() { }
 
@@ -20,14 +20,17 @@ export class HomeComponent implements OnInit {
 
   public scrollToSection(homeSection: HomeSection) {
     switch (homeSection) {
-      case HomeSection.ABOUT_SECTION:
-        this.scrollTo(this.aboutSection.nativeElement);
+      case HomeSection.SECTION_MAIN:
+        this.scrollTo(this.sectionMain.nativeElement);
         break;
-      case HomeSection.PRIORITIES_SECTION:
-        this.scrollTo(this.principlesSection.nativeElement);
+      case HomeSection.SECTION_ABOUT:
+        this.scrollTo(this.sectionAbout.nativeElement);
         break;
-      case HomeSection.PORTFOLIO_SECTION:
-        this.scrollTo(this.projectsSection.nativeElement)
+      case HomeSection.SECTION_PORTFOLIO:
+        this.scrollTo(this.sectionPortfolio.nativeElement);
+        break;
+      case HomeSection.SECTION_CONTACT:
+        this.scrollTo(this.sectionContact.nativeElement)
     }
   }
 

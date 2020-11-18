@@ -1,0 +1,132 @@
+@import "vars";
+@import "mixins";
+
+@mixin blurred-nav-bg {
+  background: rgba(39, 38, 51, .7);
+  backdrop-filter: blur(6px);
+}
+
+.nav-section {
+  @include blurred-nav-bg;
+
+  z-index: 9999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+
+  nav {
+    flex-direction: row;
+    position: relative;
+    margin: 0 auto;
+    max-width: $xl;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-list {
+      display: flex;
+      height: auto;
+      position: relative;
+      top: 0;
+
+      flex-wrap: wrap;
+      list-style: none;
+      color: #dbdbdb;
+
+      width: 100%;
+      margin: 0;
+      padding: 0;
+
+      li {
+        font-size: 18px;
+        width: auto;
+        cursor: pointer;
+        padding: 16px 16px;
+
+        &:not(:last-child) {
+          border-right: 1px solid rgba(219, 219, 219, .3);
+        }
+
+        transition: color .3s;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    .menu-icon-container {
+      display: none;
+    }
+  }
+
+  @include breakpoint-to($lg) {
+    nav {
+      $menu-icon-w-h: 20px;
+      $menu-icon-margin: 15px;
+
+      flex-direction: column;
+
+      &, .nav-list {
+        transition: all .15s, opacity 0s .15s;
+      }
+
+      &.expanded {
+        &, .nav-list {
+          background: $pw-primary;
+        }
+
+        .nav-list {
+          transition: all .15s, opacity 0s;
+
+          opacity: 1;
+          transform: scaleY(1);
+          transform-origin: top;
+
+          //opacity: 1;
+          border-bottom: 3px solid $pw-secondary;
+
+          nav {
+            background: red;
+          }
+        }
+      }
+
+      .nav-list {
+        opacity: 0;
+
+        transform: scaleY(0);
+        transform-origin: top;
+
+        position: absolute;
+        top: $menu-icon-w-h + ($menu-icon-margin * 2);
+        border-right: 0;
+
+        li {
+          width: 100%;
+          font-size: 14px;
+
+          &:hover {
+            color: $pw-secondary;
+            background: $pw-bg-dark-color;
+          }
+        }
+      }
+
+      .menu-icon-container {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+
+        .menu-icon {
+          display: block;
+          width: $menu-icon-w-h;
+          height: $menu-icon-w-h;
+          margin: $menu-icon-margin;
+          background: url("/../../../../../assets/img/menu_icon.svg") no-repeat center;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+}

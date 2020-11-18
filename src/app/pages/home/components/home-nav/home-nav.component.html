@@ -1,0 +1,14 @@
+<section class="nav-section">
+  <nav [ngClass]="{'expanded': isMenuOpened}">
+    <div class="menu-icon-container" (click)="toggleMenu()">
+      <span class="menu-icon"></span>
+    </div>
+
+    <ul class="nav-list opened">
+      <li (click)="selectSection('SECTION_MAIN')">Home</li>
+      <li (click)="selectSection('SECTION_ABOUT')">About</li>
+      <!--      <li (click)="selectSection('PRIORITIES_SECTION')">My principles</li>-->
+      <li (click)="selectSection('SECTION_PORTFOLIO')">Portfolio</li>
+    </ul>
+  </nav>
+</section>
