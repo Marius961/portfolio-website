@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import {PortfolioProjectService} from '../../services/portfolio-project.service';
 
 @Component({
-  selector: 'pw-projects-section',
-  templateUrl: './projects-section.component.html',
-  styleUrls: ['./projects-section.component.scss']
+  selector: 'pw-section-portfolio',
+  templateUrl: './section-portfolio.component.html',
+  styleUrls: ['./section-portfolio.component.scss']
 })
-export class ProjectsSectionComponent implements OnInit {
+export class SectionPortfolioComponent implements OnInit {
 
   constructor(public portfolioProjectService: PortfolioProjectService) { }
 
   ngOnInit(): void {
   }
+
 }

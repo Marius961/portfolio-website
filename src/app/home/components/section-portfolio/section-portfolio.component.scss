@@ -1,14 +1,11 @@
 @import "vars";
 @import "mixins";
 
-.projects-section {
+.section-portfolio {
   background: $pw-primary;
 
-  .projects-section-container {
+  .section-portfolio-container {
     @include section-base;
-
-    max-width: $xxl;
-    margin: 0 auto;
 
     .project-cards {
       list-style: none;

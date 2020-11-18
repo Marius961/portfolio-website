@@ -1,51 +1,49 @@
-@import "mixins";
-@import "vars";
+@import "src/scss/mixins";
+@import "src/scss/vars";
 
 $card-bg-original-w: 1920px;
 $card-bg-original-h: 1080px;
 
-.project-card {
-  width: $card-bg-original-w * .3;
+:host {
+  $card-margin: 14px;
 
-  margin: 6px;
   display: flex;
-  align-items: flex-end;
+  width: calc(50% - #{$card-margin * 2});
+  margin: $card-margin;
+}
+
+.project-card {
+  width: 100%;
+
   position: relative;
   overflow: hidden;
-  border-radius: 6px;
+  //align-items: flex-end;
 
-  background: grey center no-repeat;
-  background-size: 100%;
+  border-radius: 6px;
+  background-color: grey;
 
   .image-wrapper {
     width: 100%;
-    position: relative;
-    padding-bottom: 56.2%;
 
     img {
-      position: absolute;
-      object-fit: cover;
       width: 100%;
-      height: 100%;
+      height: auto;
     }
   }
 
-  .card-img {
-    width: $card-bg-original-w * .3;
-    height: $card-bg-original-h * .3;
-  }
-
   .card-title-container {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
     padding: 0 0 0 16px;
-    border-radius: 0 0 6px 6px;
 
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    border-radius: 0 0 6px 6px;
     color: white;
     box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.36);
     backdrop-filter: blur(6px);
@@ -145,40 +143,35 @@ $card-bg-original-h: 1080px;
 }
 
 @include breakpoint-to($xl) {
-  .project-card {
-    margin: 5px;
+  :host {
+    $card-margin: 10px;
 
-    width: $card-bg-original-w * .25;
+    width: calc(50% - #{$card-margin * 2});
+    margin: $card-margin;
   }
 }
 
-@include breakpoint-to($lg) {
-  .project-card {
-    margin: 9px;
-
-    width: $card-bg-original-w * .29;
+@include breakpoint-to($md) {
+  :host {
+    width: 100%;
+    margin: 10px 16px;
   }
 }
 
 @include breakpoint-to($sm) {
-
   :host {
-    margin: 9px;
-    width: 100%;
+    margin: 10px 0;
   }
+}
 
+@include breakpoint-to($sm) {
   .project-card {
-    margin: 0;
-
-    width: 100%;
-    height: auto;
-
     .card-title-container {
       .card-title {
         padding: 10px 10px 10px 0;
 
         h4 {
-          font-size: 14px;
+          font-size: 16px;
         }
       }
 
@@ -196,6 +189,8 @@ $card-bg-original-h: 1080px;
     }
 
     .card-description {
+      padding: 10px;
+
       .description-header-section {
         h5 {
           font-size: 14px;
