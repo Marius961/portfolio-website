@@ -1,7 +1,7 @@
 <section class="nav-section">
   <nav [ngClass]="{'expanded': isMenuOpened}">
-    <div class="menu-icon-container" (click)="toggleMenu()">
-      <span class="menu-icon"></span>
+    <div class="menu-icon-container">
+      <span (click)="toggleMenu()" class="menu-icon"></span>
     </div>
 
     <ul class="nav-list opened">

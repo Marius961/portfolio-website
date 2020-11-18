@@ -68,36 +68,23 @@
       flex-direction: column;
 
       &, .nav-list {
-        transition: all .15s, opacity 0s .15s;
+        transition: background-color .5s;
       }
 
       &.expanded {
         &, .nav-list {
+
           background: $pw-primary;
         }
 
         .nav-list {
-          transition: all .15s, opacity 0s;
-
-          opacity: 1;
-          transform: scaleY(1);
-          transform-origin: top;
-
-          //opacity: 1;
+          display: flex;
           border-bottom: 3px solid $pw-secondary;
-
-          nav {
-            background: red;
-          }
         }
       }
 
       .nav-list {
-        opacity: 0;
-
-        transform: scaleY(0);
-        transform-origin: top;
-
+        display: none;
         position: absolute;
         top: $menu-icon-w-h + ($menu-icon-margin * 2);
         border-right: 0;
