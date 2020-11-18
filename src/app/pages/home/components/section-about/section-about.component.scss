@@ -11,6 +11,8 @@
     flex-flow: row wrap;
     width: 100%;
 
+    align-items: flex-start;
+
     .title-bold {
       display: block;
       text-align: center;
@@ -26,6 +28,8 @@
 
     .personal-info-container {
       margin-right: 30px;
+      position: sticky;
+      top: 80px;
 
       .photo-container {
         margin: 0 auto 35px;
@@ -104,23 +108,20 @@
   }
 }
 
-@include breakpoint-from($lg) {
-  .section-about {
-    .info-container {
-      align-items: flex-start;
-
-      .personal-info-container {
-        position: sticky;
-        top: 80px;
-      }
-    }
-  }
-}
-
 @include breakpoint-to($xxl) {
   .section-about {
     padding-left: 18px;
     padding-right: 18px;
+  }
+}
+
+@include breakpoint-to($lg) {
+  .section-about {
+    .info-container {
+      .personal-info-container {
+        position: relative;
+      }
+    }
   }
 }
 
@@ -135,8 +136,34 @@
       }
 
       .technologies-container {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+
         margin-top: 40px;
         margin-left: 0;
+
+        .technologies-title {
+          width: 100%;
+        }
+
+        .technologies-list-container {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+
+          &:first-child {
+            margin-right: 16px;
+          }
+
+          &:last-child {
+            margin-left: 16px;
+          }
+
+          .technology-list {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -151,6 +178,24 @@
           img {
             width: 100%;
             height: auto;
+          }
+        }
+      }
+
+      .technologies-container {
+        display: block;
+
+        .technologies-list-container {
+          &:first-child {
+            margin-right: 0;
+          }
+
+          &:last-child {
+            margin-left: 0;
+          }
+
+          .technology-list {
+            width: 100%;
           }
         }
       }
