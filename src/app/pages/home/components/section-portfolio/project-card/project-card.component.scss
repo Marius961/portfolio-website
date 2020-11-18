@@ -1,5 +1,5 @@
-@import "src/scss/mixins";
-@import "src/scss/vars";
+@import "mixins";
+@import "vars";
 
 $card-bg-original-w: 1920px;
 $card-bg-original-h: 1080px;
@@ -75,7 +75,7 @@ $card-bg-original-h: 1080px;
 
       border-left: 1px solid white;
       background-repeat: no-repeat;
-      background-image: url("/../../../../../assets/img/info-icon.svg");
+      background-image: url("/../../../../../../assets/img/info-icon.svg");
       background-size: 26px;
       background-position: center;
       transition: opacity .25s;
