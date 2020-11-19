@@ -6,22 +6,83 @@
       <section class="contact-form-section">
         <span class="social-links-title">Contact me using this form:</span>
 
-        <form>
+        <form #f="ngForm" (ngSubmit)="f.valid && sendEmail()">
           <div class="form-input">
-            <input type="text" name="name" placeholder="Name *" id="name">
-          </div>
-          <div class="form-input">
-            <input type="text" name="email" placeholder="Email *" id="email">
-          </div>
-          <div class="form-input">
-            <input type="text" name="subject" placeholder="Subject *" id="subject">
-          </div>
-          <div class="form-input">
-            <textarea rows="6" name="message" placeholder="Message *" id="message"></textarea>
+            <input
+              [(ngModel)]="emailMessage.name"
+              #name="ngModel"
+              name="name"
+              id="name"
+              type="text"
+              placeholder="Name *"
+
+              required
+              minlength="2"
+              maxlength="64"
+            >
+
+            <span *ngIf="name.dirty && name.errors?.required" class="text-warning">This field is required.</span>
+            <span *ngIf="name.errors?.minlength" class="text-warning">Min length of name is 2 characters.</span>
           </div>
 
+          <div class="form-input">
+            <input
+              [(ngModel)]="emailMessage.email"
+              #email="ngModel"
+              name="email"
+              id="email"
+              type="text"
+              placeholder="Email *"
+
+              required
+              email
+              maxlength="80"
+            >
+
+            <span *ngIf="email.dirty && email.errors?.required" class="text-warning">This field is required.</span>
+            <span *ngIf="email.errors?.email" class="text-warning">This field must contain an email,</span>
+          </div>
+
+          <div class="form-input">
+            <input
+              [(ngModel)]="emailMessage.subject"
+              #subject="ngModel"
+              name="subject"
+              id="subject"
+              type="text"
+              placeholder="Subject *"
+
+              required
+              minlength="3"
+              maxlength="128"
+            >
+
+            <span *ngIf="subject.dirty && subject.errors?.required" class="text-warning">This field is required.</span>
+            <span *ngIf="subject.errors?.minlength" class="text-warning">Min length of name is 3 characters.</span>
+          </div>
+
+          <div class="form-input">
+            <textarea
+              [(ngModel)]="emailMessage.message"
+              #message="ngModel"
+              name="message"
+              id="message"
+              placeholder="Message *"
+              rows="6"
+
+              required
+              minlength="12"
+              maxlength="1024"
+            ></textarea>
+
+            <span *ngIf="message.dirty && message.errors?.required" class="text-warning">This field is required.</span>
+            <span *ngIf="message.errors?.minlength" class="text-warning">Min length of message is 12 characters.</span>
+          </div>
+
+          <span class="text-warning form-warning">Please, do not use this form for spam or sending confidential information.</span>
+
           <div class="button-container">
-            <button class="btn-submit" type="submit">Send</button>
+            <button class="btn-submit" [disabled]="f.invalid" type="submit">Send</button>
           </div>
         </form>
       </section>

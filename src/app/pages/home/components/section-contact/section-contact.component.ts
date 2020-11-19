@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {EmailMessage} from '../../models/email-message';
+import {EmailService} from '../../services/email.service';
 
 @Component({
   selector: 'pw-section-contact',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SectionContactComponent implements OnInit {
 
-  constructor() { }
+  public emailMessage: EmailMessage = new EmailMessage();
+
+  constructor(private emailService: EmailService) { }
 
   ngOnInit(): void {
   }
 
+  public sendEmail(): void {
+    const onSuccess = () => {alert("Success!")};
+    const onError = () => alert("Error!");
+
+    this.emailService.sendEmail(this.emailMessage).subscribe(onSuccess, onError);
+  }
 }
