@@ -6,7 +6,7 @@
       <section class="contact-form-section">
         <span class="social-links-title">Contact me using this form:</span>
 
-        <form #f="ngForm" (ngSubmit)="f.valid && sendEmail()">
+        <form #form="ngForm" (ngSubmit)="form.valid && sendEmail()">
           <div class="form-input">
             <input
               [(ngModel)]="emailMessage.name"
@@ -82,7 +82,7 @@
           <span class="text-warning form-warning">Please, do not use this form for spam or sending confidential information.</span>
 
           <div class="button-container">
-            <button class="btn-submit" [disabled]="f.invalid" type="submit">Send</button>
+            <button class="btn-submit" [disabled]="form.invalid" type="submit">Send</button>
           </div>
         </form>
       </section>
