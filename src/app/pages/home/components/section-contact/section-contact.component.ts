@@ -3,6 +3,7 @@ import {NgForm} from '@angular/forms';
 import {EmailMessage} from '../../models/email-message';
 import {EmailService} from '../../services/email.service';
 import swal from 'sweetalert2';
+import {environment} from '../../../../../environments/environment';
 
 @Component({
   selector: 'pw-section-contact',
@@ -14,6 +15,7 @@ export class SectionContactComponent implements OnInit {
   @ViewChild("form")
   private contactForm: NgForm;
 
+  public contactEmail = environment.contactEmail;
   public emailMessage: EmailMessage = new EmailMessage();
 
   constructor(private emailService: EmailService) { }
@@ -28,7 +30,7 @@ export class SectionContactComponent implements OnInit {
     }
     const onError = () => swal.fire(
       "Sorry!",
-      "Something went wrong. Refresh the page and try again. <br><br> If you have any problems, please contact me at <a href='mailto:work.marius.shiman@gmail.com'>this</a> email address.",
+      `Something went wrong. Refresh the page and try again. <br><br> If you have any problems, please contact me at <a href='mailto:${this.contactEmail}'>this</a> email address.`,
       "error"
     );
 
