@@ -28,13 +28,14 @@
 
     .personal-info-container {
       margin-right: 30px;
-      position: sticky;
-      top: 80px;
+      //position: sticky;
+      //top: 80px;
 
       .photo-container {
         margin: 0 auto 35px;
 
         img {
+          display: block;
           width: 300px;
           height: 300px;
 
@@ -118,9 +119,9 @@
 @include breakpoint-to($lg) {
   .section-about {
     .info-container {
-      .personal-info-container {
-        position: relative;
-      }
+      //.personal-info-container {
+      //  position: relative;
+      //}
     }
   }
 }
@@ -132,7 +133,7 @@
 
       .personal-info-container {
         margin-right: 0;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
       }
 
       .technologies-container {
@@ -148,9 +149,15 @@
         }
 
         .technologies-list-container {
+          $list-margin: 16px;
+
           display: flex;
-          flex-direction: column;
-          flex: 1;
+          flex-flow: row wrap;
+          width: calc(50% - #{$list-margin});
+
+          .list-title {
+            width: 100%;
+          }
 
           &:first-child {
             margin-right: 16px;
@@ -169,6 +176,21 @@
   }
 }
 
+@include breakpoint-to($lg) {
+  .section-about {
+    .info-container {
+      .personal-info-container {
+        .photo-container {
+          img {
+            width: 240px;
+            height: 240px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @include breakpoint-to($sm) {
   .section-about {
     .info-container {
@@ -176,26 +198,23 @@
       .personal-info-container {
         .photo-container {
           img {
-            width: 100%;
+            margin: 0 auto;
+            width: 80%;
             height: auto;
           }
         }
       }
 
       .technologies-container {
-        display: block;
-
         .technologies-list-container {
+          width: 100%;
+
           &:first-child {
             margin-right: 0;
           }
 
           &:last-child {
             margin-left: 0;
-          }
-
-          .technology-list {
-            width: 100%;
           }
         }
       }

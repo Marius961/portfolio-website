@@ -1,6 +1,6 @@
 <pw-home-nav (sectionSelected)="scrollToSection($event)"></pw-home-nav>
 <pw-section-main #sectionMain></pw-section-main>
-<pw-section-about #sectionAbout></pw-section-about>
+<pw-section-about #sectionAbout (sectionSelected)="scrollToSection($event)"></pw-section-about>
 <!--<pw-my-principles-section #principlesSection></pw-my-principles-section>-->
 <pw-section-portfolio #sectionPortfolio></pw-section-portfolio>
 <pw-section-contact #sectionContact></pw-section-contact>
