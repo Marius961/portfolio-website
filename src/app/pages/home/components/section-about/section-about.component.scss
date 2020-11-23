@@ -28,8 +28,8 @@
 
     .personal-info-container {
       margin-right: 30px;
-      //position: sticky;
-      //top: 80px;
+      position: sticky;
+      top: 80px;
 
       .photo-container {
         margin: 0 auto 35px;
@@ -119,9 +119,10 @@
 @include breakpoint-to($lg) {
   .section-about {
     .info-container {
-      //.personal-info-container {
-      //  position: relative;
-      //}
+      .personal-info-container {
+        position: relative;
+        top: auto;
+      }
     }
   }
 }
