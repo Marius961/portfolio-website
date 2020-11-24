@@ -54,13 +54,21 @@
 
           &::placeholder {
             color: #929292;
-            opacity: 1;
           }
 
           &:focus {
             border: 1px solid #9a96c8;
             outline: none;
             box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.31);
+          }
+
+          &:disabled {
+            background: #3a3843;
+            color: #b0b0b0;
+
+            &::placeholder {
+              opacity: .3;
+            }
           }
         }
       }
@@ -80,7 +88,8 @@
 
           &:disabled {
             cursor: not-allowed;
-            background: $pw-primary;
+            color: #b0b0b0;
+            background: #3a3843;
           }
 
           &:not(:disabled):hover {
