@@ -84,6 +84,15 @@
 
           <span class="text-warning form-warning">Please, do not use this form for spam or sending confidential information.</span>
 
+          <re-captcha
+            siteKey="6LdQcusZAAAAAGOB2dOi_egasdRrp6pbQuoCEA-I"
+            [(ngModel)]="emailMessage['g-recaptcha-response']"
+            name="captcha"
+            #captchaControl="ngModel"
+            theme="dark"
+            required
+          ></re-captcha>
+
           <div class="button-container">
             <button class="btn-submit" [disabled]="form.invalid || loading" type="submit">
               <span *ngIf="!loading; else sendingText">Send</span>

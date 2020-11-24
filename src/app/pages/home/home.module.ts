@@ -11,6 +11,7 @@ import {SectionAboutComponent} from './components/section-about/section-about.co
 import {SectionPortfolioComponent} from './components/section-portfolio/section-portfolio.component';
 import {HomeNavComponent} from './components/home-nav/home-nav.component';
 import {FormsModule} from '@angular/forms';
+import {RecaptchaModule, RecaptchaFormsModule} from 'ng-recaptcha';
 
 
 @NgModule({
@@ -18,7 +19,9 @@ import {FormsModule} from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RecaptchaModule,
+    RecaptchaFormsModule
   ],
   exports: [
     HomeComponent
