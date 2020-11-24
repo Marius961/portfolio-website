@@ -22,11 +22,13 @@ $card-bg-original-h: 1080px;
 
   .image-wrapper {
     width: 100%;
+    padding-top: 56.25%;
 
     img {
+      position: absolute;
+      top: 0;
       display: flex;
       min-height: 0;
-
       width: 100%;
       height: auto;
     }
