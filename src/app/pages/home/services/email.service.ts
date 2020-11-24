@@ -9,7 +9,7 @@ import {environment} from '../../../../environments/environment';
 })
 export class EmailService {
 
-  public formspreeUrl = environment.formspreeUrl;
+  public readonly formspreeUrl = environment.formspreeUrl;
 
   constructor(private http: HttpClient) { }
 

@@ -15,8 +15,10 @@ export class SectionContactComponent implements OnInit {
   @ViewChild("form")
   private contactForm: NgForm;
 
+  public readonly contactEmail = environment.contactEmail;
+  public readonly siteKey = environment.recaptchaSiteKey;
+
   public loading: boolean = false;
-  public contactEmail = environment.contactEmail;
   public emailMessage: EmailMessage = new EmailMessage();
 
   constructor(private emailService: EmailService) { }

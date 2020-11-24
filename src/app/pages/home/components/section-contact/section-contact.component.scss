@@ -16,6 +16,11 @@
       flex-direction: column;
       flex: 1;
 
+      .recaptcha {
+        display: flex;
+        justify-content: center;
+      }
+
       .text-warning {
         color: #e37a4c;
         display: block;

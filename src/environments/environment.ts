@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   contactEmail: "work.marius.shiman@gmail.com",
-  formspreeUrl: 'https://formspree.io/f/xoqplrnv'
+  formspreeUrl: 'https://formspree.io/f/xoqplrnv',
+  recaptchaSiteKey: "6LdQcusZAAAAAGOB2dOi_egasdRrp6pbQuoCEA-I"
 };
 
 /*

@@ -10,6 +10,7 @@
           <div class="form-input">
             <input
               [(ngModel)]="emailMessage.name"
+              [disabled]="loading"
               #name="ngModel"
               name="name"
               id="name"
@@ -18,7 +19,6 @@
               required
               minlength="2"
               maxlength="64"
-              [disabled]="loading"
             >
 
             <span *ngIf="name.dirty && name.errors?.required" class="text-warning">This field is required.</span>
@@ -28,6 +28,7 @@
           <div class="form-input">
             <input
               [(ngModel)]="emailMessage.email"
+              [disabled]="loading"
               #email="ngModel"
               name="email"
               id="email"
@@ -37,7 +38,6 @@
               required
               email
               maxlength="80"
-              [disabled]="loading"
             >
 
             <span *ngIf="email.dirty && email.errors?.required" class="text-warning">This field is required.</span>
@@ -47,6 +47,7 @@
           <div class="form-input">
             <input
               [(ngModel)]="emailMessage.subject"
+              [disabled]="loading"
               #subject="ngModel"
               name="subject"
               id="subject"
@@ -56,7 +57,6 @@
               required
               minlength="3"
               maxlength="128"
-              [disabled]="loading"
             >
 
             <span *ngIf="subject.dirty && subject.errors?.required" class="text-warning">This field is required.</span>
@@ -66,6 +66,7 @@
           <div class="form-input">
             <textarea
               [(ngModel)]="emailMessage.message"
+              [disabled]="loading"
               #message="ngModel"
               name="message"
               id="message"
@@ -75,7 +76,6 @@
               required
               minlength="12"
               maxlength="1024"
-              [disabled]="loading"
             ></textarea>
 
             <span *ngIf="message.dirty && message.errors?.required" class="text-warning">This field is required.</span>
@@ -85,10 +85,11 @@
           <span class="text-warning form-warning">Please, do not use this form for spam or sending confidential information.</span>
 
           <re-captcha
-            siteKey="6LdQcusZAAAAAGOB2dOi_egasdRrp6pbQuoCEA-I"
+            class="recaptcha"
+            [siteKey]="siteKey"
             [(ngModel)]="emailMessage['g-recaptcha-response']"
-            name="captcha"
             #captchaControl="ngModel"
+            name="captcha"
             theme="dark"
             required
           ></re-captcha>
