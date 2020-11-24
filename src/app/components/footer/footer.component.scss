@@ -27,11 +27,18 @@
       }
     }
   }
-
   .copyright-container {
-    padding: 12px;
-    background: $pw-primary;
     display: flex;
     justify-content: center;
+  }
+
+  .copyright-section {
+    padding: 12px;
+    background: $pw-primary;
+
+    span {
+      display: block;
+      text-align: center;
+    }
   }
 }
