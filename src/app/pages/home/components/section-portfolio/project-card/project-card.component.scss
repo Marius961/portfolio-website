@@ -24,7 +24,9 @@ $card-bg-original-h: 1080px;
     width: 100%;
 
     img {
+      display: flex;
       min-height: 0;
+
       width: 100%;
       height: auto;
     }
