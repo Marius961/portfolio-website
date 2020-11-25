@@ -34,14 +34,14 @@
       .photo-container {
         width: 300px;
         height: 300px;
-        background: #dddddd;
         margin: 0 auto 35px;
-        border-radius: 100%;
+        background-color: #dddddd;
         overflow: hidden;
+        border-radius: 100%;
 
         img {
+          border-radius: inherit;
           @include lazy-load-image;
-
           width: inherit;
           height: inherit;
         }

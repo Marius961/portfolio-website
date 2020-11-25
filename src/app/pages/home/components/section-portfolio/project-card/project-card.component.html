@@ -1,7 +1,7 @@
 <li class="project-card">
 
   <div class="image-wrapper">
-    <img [lazyLoad]="project.imageSrc" />
+    <img [offset]="300" [lazyLoad]="project.imageSrc" />
   </div>
 
   <div class="card-title-container" [ngClass]="{'show-description': isShowProjectInfo}">
