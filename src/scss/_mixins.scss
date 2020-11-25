@@ -13,3 +13,12 @@
 @mixin section-base {
   padding: 90px 10px;
 }
+
+@mixin lazy-load-image {
+  transition: opacity .3s;
+  opacity: 0;
+
+  &.ng-lazyloaded {
+    opacity: 1;
+  }
+}

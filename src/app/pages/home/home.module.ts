@@ -1,6 +1,11 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
+
 import {HttpClientModule} from '@angular/common/http';
+
+import {RecaptchaModule, RecaptchaFormsModule} from 'ng-recaptcha';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+
 import {HomeComponent} from './home.component';
 import {TechnologyItemComponent} from './components/section-about/technology-item/technology-item.component';
 import {ProjectCardComponent} from './components/section-portfolio/project-card/project-card.component';
@@ -11,8 +16,6 @@ import {SectionAboutComponent} from './components/section-about/section-about.co
 import {SectionPortfolioComponent} from './components/section-portfolio/section-portfolio.component';
 import {HomeNavComponent} from './components/home-nav/home-nav.component';
 import {FormsModule} from '@angular/forms';
-import {RecaptchaModule, RecaptchaFormsModule} from 'ng-recaptcha';
-
 
 @NgModule({
   declarations: [HomeComponent, TechnologyItemComponent, ProjectCardComponent, SectionTitleComponent, SectionContactComponent, SectionMainComponent, SectionAboutComponent, SectionPortfolioComponent, HomeNavComponent],
@@ -21,7 +24,8 @@ import {RecaptchaModule, RecaptchaFormsModule} from 'ng-recaptcha';
     FormsModule,
     HttpClientModule,
     RecaptchaModule,
-    RecaptchaFormsModule
+    RecaptchaFormsModule,
+    LazyLoadImageModule
   ],
   exports: [
     HomeComponent
